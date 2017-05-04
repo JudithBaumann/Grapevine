@@ -1,0 +1,23 @@
+/*Darstellung im Block für Internet Explorer 8*/
+header,
+nav,
+footer {display:block;}
+
+/******************/
+body {background-color: #85004B}
+
+#aussen{width:960px;
+    /*wenn Browserfenster kleiner wird Anpassung*/
+    margin: 0px auto;
+    /*mittige Platzierung des Containers*/
+    background: #35C0CD;
+    margin-top: 20px;
+    /*Abstand nach oben*/
+    padding:20px;
+    /*Elemente sollen nicht so nah am Rand stehen */
+}
+
+header {}
+#content{}
+nav{}
+footer{}
