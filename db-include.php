@@ -1,23 +1,15 @@
 <html>
 <body>
 <?php
-$servername = "mars.iuk.hdm-stuttgart.de";
-$dbname = "u-jb184";
-$passwort = "Eithee90hK";
+$dsn = "mysql:dbhost=https://mars.iuk.hdm-stuttgart.de;dbname=u-jb184";
+$dbuser = "jb184";
+$dbpass = "Eithee9OhK";
+$db = new PDO($dsn, $dbuser, $dbpass);
 
-$dsn="mysql:: host=mars.iuk.hdm-stuttgart.de; dbname=u-jb184";
-
-try{$db= new PDO($dsn, "jb184", "Eithee9OhK", array('charset'=>'utf8'));
-
-}
-
-catch (PDOException$p)
-{
-    echo ("Fehler bei Aufbau der Datenbankverbindung.".$p->getMessage());
-
-}
+$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 ?>
+
 
 </body>
 </html>
