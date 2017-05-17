@@ -1,6 +1,6 @@
 <html>
 <head>
-
+    <link rel="stylesheet" href="Stylesheet.css">
 </head>
 <body>
 <?php
@@ -11,29 +11,51 @@ if (empty($_POST)) {
     ?>
     <h1>Registration</h1>
     <form name="registration" action="register.php" method="POST">
-        <label for "ID">ID: </label>
-        <input type="text" name="ID"/> <br/>
-        <label for "Vorname">Vorname: </label>
-        <input type="text" name="Vorname"/> <br/>
-        <label for 'Nachname'>Nachname: </label>
-        <input type="text" name="Nachname"/> <br/>
-        <label for 'Email'>Email: </label>
-        <input type="text" name="Email"/> <br/>
-        <label for 'Passwort'>Passwort: </label>
-        <input type="password" name="Passwort"/> <br/>
-        <label for 'Wohnort'>Wohnort: </label>
-        <input type="text" name="Wohnort"/> <br/>
-        <label for 'Geburtsdatum'>Geburtsdatum: </label>
-        <input type="text" name="Geburtsdatum"/>
-        <br/>
+        <label for "username">Username: </label>
+        <input type="text" name="username"/> <br/>
+        <label for "firstname">First name: </label>
+        <input type="text" name="firstname"/> <br/>
+        <label for 'lastname'>First name: </label>
+        <input type="text" name="lastname"/> <br/>
+        <label for 'email'>Email: </label>
+        <input type="text" name="email"/> <br/>
+        <label for 'password'>Password: </label>
+        <input type="password" name="password"/> <br/>
+        <label for 'birthday'>Date of Birth: </label>
+                 <?php
+                  echo '</select>';
+                  echo '<select name="day">';
+                  echo '<option></option>';
+                  for ($i = 1; $i <= 31; $i++) {
+                       $i = str_pad($i, 2, 0, STR_PAD_LEFT);
+                       echo "<option value='$i'>$i</option>";
+                 }
+
+                  echo '</select>';
+                  echo '<select name="month">';
+                 echo '<option></option>';
+                    for ($i = 1; $i <= 12; $i++) {
+                      $i = str_pad($i, 2, 0, STR_PAD_LEFT);
+                        echo "<option value='$i'>$i</option>";
+                 }
+                  echo '</select>';
+                 echo '<select name="year">';
+                 echo '<option></option>';
+                 for ($i = date('Y'); $i >= date('Y', strtotime('-100 years')); $i--) {
+                     echo "<option value='$i'>$i</option>";
+                 }
+
+                ?>
+
+
         <button type="submit">Submit</button>
     </form>
 
+
     <?php
 
+
 }
-
-
 
 else {
 
@@ -41,19 +63,19 @@ else {
 
 
 $form = $_POST;
-    $Vorname = $form['Vorname'];
-$Nachname = $form['Nachname'];
-$Email = $form['Email'];
-$Passwort = $form ['Passwort'];
-$Wohnort = $form ['Wohnort'];
-$Geburtsdatum = $form['Geburtsdatum'];
+    $username = $form['username'];
+    $firstname = $form['firstname'];
+    $lastname = $form['lastname'];
+    $email = $form['email'];
+    $password = $form ['password'];
+    $birthday = $form['birthday'];
 
 
 
-$sql = "Insert Into Nutzer (Vorname, Nachname, Email, Passwort, Wohnort, Geburtsdatum) Values (:Vorname, :Nachname, :Email, :Passwort, :Wohnort, :Geburtsdatum)";
+$sql = "Insert Into Nutzer (username, firstname, lastname, email, password, birthdate) Values (:username, :firstname, :lastname, :email, :password, :birthday)";
 
 $query = $db->prepare($sql);
-$result = $query->execute(array(":Vorname"=>$Vorname, ":Nachname"=>$Nachname, ":Email"=>$Email, ":Passwort"=>$Passwort, ":Wohnort"=>$Wohnort, ":Geburtsdatum"=>$Geburtsdatum));
+$result = $query->execute(array("username"=>$username, ":firstname"=>$firstname, ":lastname"=>$lastname, ":email"=>$email, ":password"=>$password, ":birthday"=>$birthday));
 
     if ( $result ){
         echo "<p>Thank you. You have been registered</p>";
