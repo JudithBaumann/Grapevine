@@ -5,9 +5,9 @@
 <body>
 <?php
 
-//include_once "db-include.php";
+include_once "db-include.php";
 
-$con = mysqli_connect("localhost", "jb184", "Eithee9OhK", "Posting");
+//$con = mysqli_connect("localhost", "jb184", "Eithee9OhK", "Posting");
 
 session_start();
 if (isset($_POST["register"]))
