@@ -10,6 +10,10 @@ include_once "db-include.php";
 //$con = mysqli_connect("localhost", "jb184", "Eithee9OhK", "Posting");
 
 session_start();
+
+$_SESSION["login"] = "yes";
+
+
 if (isset($_POST["register"]))
 {
     if(empty($_POST["password"]) || empty($_POST["confirmpassword"]))
