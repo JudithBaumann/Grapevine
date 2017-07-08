@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Grapevine</title>
-    <link rel="stylesheet" href="newsfeed.css"
+    <link rel="stylesheet" href="CSS/newsfeed.css"
     <script src="jquery.js"></script>
 
 </head>

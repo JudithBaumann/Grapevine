@@ -1,33 +1,13 @@
 <html>
 <head>
-    <link rel="stylesheet" href="New_Stylesheet.css">
+    <link rel="stylesheet" href="CSS/New_Stylesheet.css">
 </head>
 <body>
 <?php
 
-include_once "db-include.php";
+include_once "Includes/db-connection.php";
 
-if(isset($_GET['login'])) {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
 
-    $statement = $pdo->prepare("SELECT * FROM Nutzer WHERE username = :username");
-    $result = $statement->execute(array('username' => $username));
-    $user = $statement->fetch();
-
-    //Überprüfung des Passworts
-    if ($user !== false && password_verify($passwort, $user['passwort'])) {
-        $_SESSION['userid'] = $user['id'];
-        die('Login erfolgreich. Weiter zu <a href="News_Feed.php">internen Bereich</a>');
-    } else {
-        $errorMessage = "E-Mail oder Passwort war ungültig<br>";
-    }
-
-}
-
-if(isset($errorMessage)) {
-    echo $errorMessage;
-}
 ?>
 
 
@@ -37,8 +17,8 @@ if(isset($errorMessage)) {
     </div>
 
     <div class="container">
-        <label><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="username" required>
+        <label><b>E-Mail</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
 
         <label><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="password" required>
