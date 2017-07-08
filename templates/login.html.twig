@@ -1,15 +1,6 @@
-<html>
-<head>
-    <link rel="stylesheet" href="CSS/New_Stylesheet.css">
-</head>
-<body>
-<?php
+{% extends "layout.html.twig" %}
 
-include_once "Includes/db-connection.php";
-
-
-?>
-
+{% block content %}
 
 <form action="News_Feed.php" name="login" method="post">
     <div class="imgcontainer">
@@ -33,3 +24,4 @@ include_once "Includes/db-connection.php";
     </div>
 </form>
 
+{% endblock %}
