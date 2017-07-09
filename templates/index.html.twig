@@ -1,12 +1,21 @@
-{% extends "layout.html.twig" %}
+<!Doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Grapevine</title>
+    <link rel="stylesheet" href="newsfeed.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <script src="jquery.js"></script>
 
-{% block content %}
+</head>
+
+<section> id="menubar"</section>
 
     <script>
         $(document).ready(function () {
             $("#loader").hide();
             $("#feed").load("newsfeed.php");
-        });
+         });
     </script>
 
     <div id="pre_box">
@@ -21,4 +30,6 @@
     </div>
 
     <script src="post_status.js"></script>
-{% endblock %}
+
+</body>
+</html>
