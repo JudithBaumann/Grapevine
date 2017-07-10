@@ -22,4 +22,5 @@
                  for ($i = date('Y'); $i >= date('Y', strtotime('-100 years')); $i--) {
                      echo "<option value='$i'>$i</option>";
                      $i = $year;
+                 }
 ?>
