@@ -5,7 +5,7 @@
 <body>
 <?php
 
-include_once "Includes/db-connection.php";
+require_once "Includes/db-connection.php";
 
 session_start();
 
