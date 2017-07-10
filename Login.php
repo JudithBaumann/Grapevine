@@ -7,13 +7,14 @@
 
 include_once "Includes/db-connection.php";
 
+session_start();
 
 ?>
 
 
-<form action="News_Feed.php" name="login" method="post">
+<form action="Login.php" name="login" method="post">
     <div class="imgcontainer">
-        <img src="img_avatar2.png" alt="Avatar" class="avatar">
+        <img src="IMG/OGF8C40.jpg" alt="Avatar" class="avatar">
     </div>
 
     <div class="container">
@@ -33,3 +34,27 @@ include_once "Includes/db-connection.php";
     </div>
 </form>
 
+<?php
+
+if(!empty($_POST)) {
+
+
+    $form = $_POST;
+    $email = $form['email'];
+    $password = $form['password'];
+
+    $select = "SELECT * FROM gv_user WHERE email = :email";
+
+    $stmt = $db->prepare($select);
+    $stmt->bindParam(":email", $email);
+    $stmt->execute();
+    $result = $stmt->fetch();
+
+    var_dump($result);
+   if($result != false && password_verify($password, $result["password"])){
+       $_SESSION["email"] = $result["email"];
+       $_SESSION["id"] = $result["id"];
+       header("location: News_Feed.php");
+       echo "hallo";
+   }
+}
