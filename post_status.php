@@ -1,14 +1,10 @@
 <?php
-$dsn = "mysql:dbhost=https://mars.iuk.hdm-stuttgart.de;dbname=u-jb184";
-$dbuser = "jb184";
-$dbpass = "Eithee9OhK";
-$db = new PDO($dsn, $dbuser, $dbpass);
 
-$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+session_start();
+include "Includes/db-connection.php";
 
-"Select from Posting (ALL)";
 
-$status = $_POST['s'];
+$status = $_POST['status'];
 
 if(!$status)
 {
@@ -16,7 +12,13 @@ if(!$status)
 }
 else
 {
-    echo "success";
+    $sql = "INSERT INTO gv_post (content, created, user_id) VALUES (:content, now(), :user_id)";
+    $stmt = $db->prepare($sql);
+    $stmt->bindParam(":content", $status);
+    $stmt->bindParam(":user_id", $_SESSION["id"]);
+    $stmt->execute();
+    header("Location: News_Feed.php");
 }
+
 ?>
 
