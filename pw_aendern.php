@@ -22,7 +22,7 @@ $Statement = $db->prepare($aendern);
 $Statement->bindParam(":password", $password_n);    //einfügen der Parameter durch bindParam
 $Statement->bindParam(":email", $email);      //einfügen der Parameter durch bindParam
 $Statement->execute();
-header("location: pw_aendern_3.php");
+header("location: pw_aendern_2.php?success=1");
 
     }
 
