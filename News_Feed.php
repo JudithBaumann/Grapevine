@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include "Includes/db-connection.php"; //verbindung zur datenbank benutzername und passwort nochmal einschreiben)
+require "Includes/db-connection.php"; //verbindung zur datenbank benutzername und passwort nochmal einschreiben)
 
 if (!isset($_SESSION["email"]))// (Variable im Log in Benennen)
 {

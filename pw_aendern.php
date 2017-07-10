@@ -5,7 +5,7 @@ $password_n = ($_POST["password_n"]);
 $email = $_SESSION["email"];
 
 
-include "Includes/db-connection.php"; //verbindung zur datenbank benutzername und passwort nochmal einschreiben)
+require "Includes/db-connection.php"; //verbindung zur datenbank benutzername und passwort nochmal einschreiben)
 $abfrage = "SELECT password FROM gv_user WHERE email = :email";
 $Statement= $db->prepare($abfrage);
 $Statement->bindParam(":email", $email);

@@ -4,7 +4,7 @@
 </head>
 <body>
 <?php
-include "db-include.php"
+require "db-include.php"
 ?>
 
 <h1>WELCOME TO GRAPEVINE</h1>

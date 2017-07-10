@@ -5,7 +5,7 @@
 <body>
 <?php
 
-include_once "Includes/db-connection.php";
+require_once _once "Includes/db-connection.php";
 
 //$con = mysqli_connect("localhost", "jb184", "Eithee9OhK", "Posting");
 

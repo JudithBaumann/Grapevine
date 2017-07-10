@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include "Includes/db-connection.php";
+require "Includes/db-connection.php";
 
 
 $status = $_POST['status'];
