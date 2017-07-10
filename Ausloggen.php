@@ -4,4 +4,4 @@ session_destroy();
 
 header("location: Login.php");
 
-#hsllo
+#dies ist ein Kommentar
