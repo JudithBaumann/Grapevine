@@ -1,0 +1,90 @@
+body{
+    background: url(https://www.flickr.com/photos/150587646@N07/33862983324/in/photolist-TAmDb5-S7zE7p-9b93MZ-stpfVR-owLE9J-Vo19vJ-UiAj2L-r1sSf3-p5ebow-UFJGF8-6CERK5-6Zteyf-SCjiva-Usa5ug-WmYfrd-QSzhpg-W5MSs2-gviLXv-TXk96M-V5witW-Sz8yDD-VR6oZw-fD8f2K-GtNufJ-jSHjNZ-RyXXQo-8MuBUs-Vu7fHW-QY1GyQ-q85f7X-9psbjR-6ZGWCR-TcGKUb-TkVubT-SxhJXP-bwAZKk-aqAtbH-t4n3iA-V2LCCp-TaZK2j-E6qrv8-cg8uzL-avbK2K-VnRWXE-EQV9EJ-aMM9zB-8v88dD-pjMC4P-p2N5bU-QyoyvA) no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.container {
+    width: 30px;;
+    margin-left: 0% ;
+}
+
+
+
+.login-heading{
+
+    background-color: #f1f1f1;
+    width:50%;
+    margin-left: 25%;
+}
+
+.logintitle{
+    margin-top:30%;
+    margin-left: 33%;
+    font-style: inherit;
+    font-size: 40px;
+}
+
+.form-group{
+    width:76%;
+    margin-left: 38%;
+}
+.col-md-8{
+   width: 100px;
+
+}
+.panel{
+    background-color: #f1f1f1;
+}
+
+.btn-primary {
+    width: 76%;
+    margin-left: 38%;
+    color: #4caf50;
+}
+
+.registration{
+    margin-left: 41%;
+}
+button{
+    margin-left: 74%;
+    color: #4caf50;
+}
+.blog-master{
+    width: 700px;
+    background-color: green;
+    box-shadow: inset 0 -5px 5px rgba(0,0,0,.1);
+}
+.blog-nav-item{
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    font-weight:300;
+    color:white;
+    text-decoration: none;
+}
+.blog-nav-item:hover{
+    text-decoration: none;
+    font-weight:bold ;
+    color:white;
+}
+
+.sidebar-brand {
+    margin-left: 20px;
+    margin-top: 20px;
+
+}
+
+.sidebar-button {
+
+}
+
+.navbar-btn {
+
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
