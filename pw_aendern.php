@@ -28,7 +28,7 @@ header("location: pw_aendern_2.php?success=1");
 
 
     else {
-echo "Falsches Passwort!"
+echo "Falsches Passwort!!"
    ."<br /><a href='pw_aendern_2.php'>Zurück</a>";
    }
 ?>
