@@ -59,11 +59,16 @@ else {
         $lastname = $form['lastname'];
         $email = $form['email'];
         $password = $form ['password'];
+        $confirm = $form ['confirmpassword'];
+
+    if ($password != $confirm) {
+        header("location: register.php");
+        echo "Die Passwörter stimmen nicht überein";
+    }
+    else {
 
 
-
-
-    $password = password_hash($password, PASSWORD_DEFAULT);
+        $password = password_hash($password, PASSWORD_DEFAULT);
 
         $sql = "Insert Into gv_user (firstname, lastname, email, password) Values (:firstname, :lastname, :email, :password)";
 
@@ -74,11 +79,10 @@ else {
         if ($result) {
             echo "<p>Thank you. You have been registered!</p>";
             header("location: Login.php");
-        }
-        else {
+        } else {
             echo "<p>Sorry, there has been a problem inserting your details. Please contact admin.</p>";
         }
-
+    }
 
    }
 ?>
