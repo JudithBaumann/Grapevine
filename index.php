@@ -8,7 +8,7 @@ require "db-include.php"
 ?>
 
 <h1>WELCOME TO GRAPEVINE</h1>
-<a href= "Login.php"> <button>Login</button></a> <a href="register.php"> <button>Register</button></a>
+<a href= "Login.php"> <button>Login</button></a> <a href="register.php"> <button>Registrieren</button></a>
 
 
 

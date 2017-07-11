@@ -5,7 +5,7 @@
 <body>
 <?php
 
-require_once _once "Includes/db-connection.php";
+require_once "Includes/db-connection.php";
 
 //$con = mysqli_connect("localhost", "jb184", "Eithee9OhK", "Posting");
 
@@ -34,11 +34,11 @@ if (empty($_POST)) {
     ?>
     <h1>Sign up to Grapevine</h1>
     <form name="registration" action="register.php" method="POST">
-        <input type="text" placeholder="First Name" name="firstname" required> <br/>
-        <input type="text" placeholder="Last Name" name="lastname" required> <br/>
+        <input type="text" placeholder="Vorname" name="firstname" required> <br/>
+        <input type="text" placeholder="Nachname" name="lastname" required> <br/>
         <input type="email" placeholder="Email" name="email" required> <br/>
-        <input type="password" placeholder="Password" name="password" required> <br/>
-        <input type="password" placeholder="Confirm Password" name="confirmpassword" required> <br/>
+        <input type="password" placeholder="Passwort" name="password" required> <br/>
+        <input type="password" placeholder="Passwort bestätigen" name="confirmpassword" required> <br/>
         <input type="submit" name="register" value="Registrieren">
     </form>
 

@@ -5,7 +5,7 @@
 {
     move_uploaded_file($_FILES["file"]["name"],
         "upload/" . $_FILES["file"]["name"]);
-    echo "<script>alert('File Uploaded Successfully'); 
+    echo "<script>alert('Datei erfolgreich hochgeladen'); 
                 location = 'upload.php';
             </script>";
     exit();
