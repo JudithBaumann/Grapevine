@@ -15,4 +15,3 @@ require "db-include.php"
 </body>
 </html>
 
-#asdfs

@@ -8,10 +8,6 @@ $db = new PDO($dsn, $dbuser, $dbpass);
 
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-#dies  ist ein Kommentar für Judith!!!!
-#halllloooooooooo dies ist ein Kommenta
-#die dbconnection funktioniert
-
 
 ?>
 
