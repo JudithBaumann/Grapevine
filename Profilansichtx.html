@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="CSS/New_Stylesheet.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="bootstrapprofil.css" rel="stylesheet">
+    <title>Profilansicht</title>
+</head>
+<body>
+<div class="container">
+
+    <div class="login-heading">
+        <h1 class="logintitle">Profil</h1>
+
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-8">
+            <div class="panel" style="...">
+                <h2 class="login-subtitle">Neues Profilbild hochladen!</h2>
+
+                <button type="button" class="btn btn-success btn-lg">Bild hochladen</button>
+                <button type="button" class="btn btn-success btn-lg">Datei auswählen...</button>
+            </div>
+            <div class="col-md-3">
+
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+<div class="row">
+    <div class="col col-md-6">
+
+        <h1> <div class="panel-heading"> <?= $username["firstname"]?> <?= $username["lastname"] ?></div></h1>
+        <div class="panel-body">
+        </div>
+    </div>
+    <div class="col-6 col-md-6">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col col-md-6">
+
+        <div class="container">
+            <form action="Profilbild_hochladen.php" method="post" enctype="multipart/form-data">
+                <input type="text" name="Beschreibung">
+                <input type="file" name="datei"><br>
+                <input type="submit" value="Profilbild hochladen">
+
+                <br>
+                <br>
+            </form>
+        </div>
+    </div>
+</div>
+<a class="btn btn-success" href="Follow.php">Folgen</a>
+<?php
+    }
+
+?>
+
+
+
+</body>
+</>
+
