@@ -32,7 +32,7 @@ header("location: pw_aendern_2.php?success=1");
     }
 
 
-   else {
+else {
 header("location: pw_aendern_2.php?false=1");
    }
 ?>
