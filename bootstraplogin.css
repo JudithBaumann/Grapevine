@@ -1,0 +1,53 @@
+body{
+    background-color: black;
+    background-image: url("IMG_0255.JPG");
+    background-size: cover;
+
+}
+
+.container {
+    border-radius: 25px;
+    color: darkgrey;
+    background-color: white;
+    margin:auto;
+    width:50%;
+    margin-top: 5%;
+
+
+}
+
+
+
+.login-heading{
+    border-radius:25px;
+    background-color:white;
+
+}
+
+.logintitle{
+    padding:10px;
+    color:black;
+
+}
+
+.login-subtitle {
+    padding:;
+    color:darkgrey;
+}
+
+.col-md-8{
+    margin: auto;
+
+}
+
+.panel{
+    background-color: white;
+
+}
+
+button{
+
+}
+
+
+
