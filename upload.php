@@ -2,7 +2,7 @@
 if (!isset($_SESSION["email"]))// (Variable im Log in Benennen)
 {
     header("location: Login.php");
-
+}
 
 {
     move_uploaded_file($_FILES["file"]["name"],

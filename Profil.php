@@ -18,6 +18,8 @@
 <?php
 session_start();
 
+include "header.php";
+
 require_once "Includes/db-connection.php"; //verbindung zur datenbank benutzername und passwort nochmal einschreiben)
 
 if (!isset($_SESSION["id"]))// (Variable im Log in Benennen)
@@ -50,7 +52,12 @@ foreach ($Ergebnisabfragedb as $Zeilen) {
                 <div class="panel-heading"> <?= $username["firstname"]?> <?= $username["lastname"] ?></div> -->
 <div class="panel-body">
     <?php if($Zeilen["profilpic"] != NULL){
-        echo "<img class='img-responsive' src='".$Zeilen["profilpic"]."'><br>";
+        echo "<img class='img-responsive' src='".$Zeilen["profilpic"]."' style='       
+        border: 2px;
+        object-fit: cover;
+        width: 250px;
+        height: 250px;
+        '><br>";
     }
     ?>
 
@@ -59,9 +66,21 @@ foreach ($Ergebnisabfragedb as $Zeilen) {
 
 
     ?>
-    <html>
     <body>
-    <a href="News_Feed.php">Zum Newsfeed</a>
+    <div class="row">
+        <div class="col col-md-6">
+
+            <h1> <div class="panel-heading"> <?= $username["firstname"]?> <?= $username["lastname"] ?></div></h1>
+            <div class="panel-body">
+            </div>
+        </div>
+        <div class="col-6 col-md-6">
+            </div>
+        </div>
+
+        <div class="row">
+<div class="col col-md-6">
+
     <div class="container">
         <form action="Profilbild_hochladen.php" method="post" enctype="multipart/form-data">
             <input type="text" name="Beschreibung">
@@ -72,17 +91,15 @@ foreach ($Ergebnisabfragedb as $Zeilen) {
             <br>
         </form>
     </div>
-
+    </div>
+            </div>
+<a class="btn btn-success" href="Follow.php">Folgen</a>
     <?php
     }
 
 ?>
 
 
-<div class="panel panel-default">
-                <div class="panel-heading"> <?= $username["firstname"]?> <?= $username["lastname"] ?></div>
-<div class="panel-body">
-
 
 </body>
-</html>
+</>

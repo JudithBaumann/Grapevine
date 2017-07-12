@@ -3,13 +3,15 @@ session_start();
 
 require_once "Includes/db-connection.php"; //verbindung zur datenbank benutzername und passwort nochmal einschreiben)
 
+include "header.php";
+
 if (!isset($_SESSION["email"]))// (Variable im Log in Benennen)
 {
     header("location:Login.php");
 
 }
 
-include "header.php";
+// include "header.php";
 
 
 $sql ="SELECT * FROM gv_post ORDER by created DESC"; //SQL befehl zum abfragen in diesem Fall die Posttabelle in der DB "*" bedeutet alle Spalten auswählen
@@ -23,7 +25,7 @@ $Ergebnisabfragedb= $Statement->fetchAll();
 <head>
     <meta charset="utf-8">
     <title>Grapevine</title>
-    <link rel="stylesheet" href="CSS/New_Stylesheet.css"
+
     <script src="jquery.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -60,7 +62,7 @@ $Ergebnisabfragedb= $Statement->fetchAll();
 
             ?>
             <div class="panel panel-default">
-                <div class="panel-heading"> <a href="Profil_user.php"> <?= $username["firstname"]?> <?= $username["lastname"] ?></a></div>
+                <div class="panel-heading"> <a href="Profil_user.php"> <?= $username["firstname"]?> <?= $username["lastname"] ?> </a></div>
                 <div class="panel-body">
                 <?php if($Zeilen["image"] != NULL){
                         echo "<img class='img-responsive' src='".$Zeilen["image"]."'><br>";
