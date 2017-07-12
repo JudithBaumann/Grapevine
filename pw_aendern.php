@@ -1,11 +1,16 @@
 <?php
 session_start();
+if (!isset($_SESSION["email"]))// (Variable im Log in Benennen)
+{
+    header("location: Login.php");
+}
+
 $password_a = ($_POST["password_a"]);
 $password_n = ($_POST["password_n"]);
 $email = $_SESSION["email"];
 
 
-require "Includes/db-connection.php"; //verbindung zur datenbank benutzername und passwort nochmal einschreiben)
+include "Includes/db-connection.php"; //verbindung zur datenbank benutzername und passwort nochmal einschreiben)
 $abfrage = "SELECT password FROM gv_user WHERE email = :email";
 $Statement= $db->prepare($abfrage);
 $Statement->bindParam(":email", $email);
@@ -27,9 +32,8 @@ header("location: pw_aendern_2.php?success=1");
     }
 
 
-    else {
-echo "Falsches Passwort!!"
-   ."<br /><a href='pw_aendern_2.php'>Zurück</a>";
+   else {
+header("location: pw_aendern_2.php?false=1");
    }
 ?>
 

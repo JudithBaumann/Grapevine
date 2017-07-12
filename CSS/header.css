@@ -1,0 +1,12 @@
+.navbar {
+background-color: darkblue;
+}
+
+.navbar-header{
+    background-color: blue;
+}
+
+.container-fluid{
+    background-color: darkblue;
+    color: navy;
+}
