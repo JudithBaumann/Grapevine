@@ -4,7 +4,6 @@ session_start();
 
 require_once "Includes/db-connection.php"; //verbindung zur datenbank benutzername und passwort nochmal einschreiben)
 
-include "header.php";
 
 if (!isset($_SESSION["email"]))// (Variable im Log in Benennen)
 {
@@ -63,7 +62,7 @@ if (!isset($_SESSION["email"]))// (Variable im Log in Benennen)
 
     <div class="row">
         <div class="navbar navbar-default navbar-fixed-bottom">
-            <div class="container">
+            <div class="footer">
                 <a class="navbar-text pull-left">2017 Copyright</a>
                 <a class="navbar-text pull-right" href="Impressum.php">Impressum</a>
                 <a class="navbar-text pull-right" href="Datenschutz.php">Datenschutzerklärung</a>
